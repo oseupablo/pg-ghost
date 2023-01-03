@@ -1,0 +1,61 @@
+{{!< default}}
+
+<div class="gh-outer">
+  <main class="site-main gh-inner">
+    <section class="pg-home-highlight">
+      <div class="pg-home-programs">
+        <ul>
+          {{#get "posts" filter="tag:programas" limit="2"}}
+            {{#foreach posts}}
+            <li>
+              <a href="{{url}}" data-event="pg-home-programs" class="pg-programs-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <h2><a href="{{url}}">{{title}}</a></h2>
+            </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+
+      {{#get "posts" filter="tag:-programas" limit="1" include="authors"}}
+        {{#foreach posts}}
+          <div class="pg-featured-home">
+            <a href="{{url}}" data-event="pg-featured-post-image">
+              <img src="{{feature_image}}" alt="{{feature_image_alt}}">
+            </a>
+            <a href="{{url}}" data-event="pg-featured-post-title" class="pg-featured-link">
+              <h1>{{title}}</h1>
+            </a>
+          </div>
+        {{/foreach}}
+      {{/get}}
+
+      <div class="pg-latest-posts">
+        <ul>
+          {{#get "posts" filter="tag:-programas" limit="4" include="authors"}}
+            {{#foreach posts from=2 limit=4}}
+            <li>
+              <a href="{{url}}" data-event="pg-recent-posts" class="pg-latest-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
+              <h3><a href="{{url}}">{{title}}</a></h3>
+            </li>
+            {{/foreach}}
+          {{/get}}
+        </ul>
+      </div>
+    </section>
+
+    <section class="pg-categories">
+      <h2 class="pg-section-title">Categorias</h2>
+      <ul>
+        {{#get "tags" limit="4" as |categories|}}
+          {{#foreach categories}}
+            <li>
+              <a class="pg-topic-item" href="{{url}}">
+                <h3 class="pg-topic-name">{{name}}</h3>
+              </a>
+            </li>
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </section>
+  </main>
+</div>

@@ -1,0 +1,124 @@
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex-grow: 1;
+  padding: 80px 0 40px;
+}
+
+@media (max-width:767px) {
+  .site-content {
+    padding: 40px 0;
+  }
+
+}
+
+.pg-home-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.pg-home-highlight li {
+  list-style: none;
+  position: relative;
+}
+
+.pg-home-highlight .pg-home-programs,
+.pg-home-highlight .pg-featured-home,
+.pg-home-highlight .pg-latest-posts {
+  flex: 1 300px;
+  list-style: none;
+}
+
+.pg-home-highlight .pg-home-programs,
+.pg-home-highlight .pg-latest-posts {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+}
+
+/**** 
+ * Last episode published
+****/
+.pg-home-highlight .pg-featured-home {
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+.pg-home-highlight .pg-featured-home h1 {
+  font: 600 3rem/1.2;
+  padding: 20px 0;
+}
+
+.pg-home-highlight .pg-featured-home img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 600px;
+}
+
+/**** 
+ * programs
+****/
+
+.pg-home-highlight .pg-home-programs .pg-programs-img img {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.pg-home-highlight .pg-home-programs li:not(:last-child),
+.pg-home-highlight .pg-latest-posts li:not(:last-child) {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pg-home-highlight .pg-home-programs h2 {
+  font: 400 1.6rem/1.4;
+  padding: 10px 0 0;
+}
+
+.pg-home-highlight .pg-home-programs .pg-author-name {
+  padding: 10px 0;
+  display: block;
+}
+
+/**** 
+ * latest post
+****/
+.pg-home-highlight .pg-latest-posts li {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.pg-home-highlight .pg-latest-posts .pg-latest-post-img {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.pg-home-highlight .pg-latest-posts .pg-latest-post-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pg-home-highlight .pg-latest-posts h3 {
+  font: 1.6rem/1.5;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.pg-home-highlight li a:hover {
+  opacity: 1 !important;
+}
