@@ -1,3 +1,20 @@
+.u-section-title {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+}
+
+.u-section-title:after {
+  background-color: var(--color-light-gray);
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 1.6rem;
+}
+
 .u-permalink {
     position: absolute;
     top: 0;
