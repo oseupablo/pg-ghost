@@ -44,7 +44,7 @@
     </section>
 
     <section class="pg-categories">
-      <h2 class="pg-section-title">Categorias</h2>
+      <h2 class="pg-section-title">Categorias:</h2>
       <ul>
         {{#get "tags" limit="4" as |categories|}}
           {{#foreach categories}}
@@ -54,6 +54,50 @@
               </a>
             </li>
           {{/foreach}}
+        {{/get}}
+      </ul>
+    </section>
+
+    <section class="gh-foot-inner gh-inner">
+      <div class="subscribe{{#if is_popup}} popup{{/if}}">
+        {{#if @custom.apple_podcasts_link}}
+          <a href="{{@custom.apple_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+              {{> "icons/apple"}}
+              <span class="subscribe-text">Apple</span>
+          </a>
+        {{/if}}
+        {{#if @custom.google_podcasts_link}}
+          <a href="{{@custom.google_podcasts_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+              {{> "icons/google"}}
+              <span class="subscribe-text">Google</span>
+          </a>
+        {{/if}}
+        {{#if @custom.spotify_link}}
+          <a href="{{@custom.spotify_link}}" class="subscribe-link" target="_blank" rel="noopener noreferrer">
+              {{> "icons/spotify"}}
+              <span class="subscribe-text">Spotify</span>
+          </a>
+        {{/if}}
+        <a href="{{#if @custom.rss_link}}{{@custom.rss_link}}{{else}}{{@site.url}}/rss{{/if}}" class="subscribe-link rss" target="_blank" rel="noopener noreferrer">
+          {{> "icons/rss"}}
+          <span class="subscribe-text">RSS</span>
+        </a>
+      </div>
+    </section>
+
+
+    <section class="pg-recommended">
+      <h2 class="pg-section-title">Recomendados</h2>
+      <ul>
+        {{#get "posts" filter="featured:true" limit="4" as |featured|}}
+        {{#foreach featured}}
+        <li>
+          <a href="{{url}}" alt="{{meta_description}}">
+            <figure><img src="{{feature_image}}" alt="{{feature_image_alt}}"></figure>
+            {{!-- <h3>{{title}}</h3> --}}
+          </a>
+        </li>
+        {{/foreach}}
         {{/get}}
       </ul>
     </section>

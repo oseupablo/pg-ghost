@@ -62,9 +62,7 @@
   height: 600px;
 }
 
-/**** 
- * programs
-****/
+/*programs*/
 
 .pg-home-highlight .pg-home-programs .pg-programs-img img {
   height: 200px;
@@ -90,9 +88,8 @@
   display: block;
 }
 
-/**** 
- * latest post
-****/
+/*latest episodes*/
+
 .pg-home-highlight .pg-latest-posts li {
   display: block;
   overflow: hidden;
@@ -122,3 +119,46 @@
 .pg-home-highlight li a:hover {
   opacity: 1 !important;
 }
+
+
+.pg-section-title {
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+}
+
+/*categorias*/
+.pg-categories {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+}
+
+.pg-categories ul {
+  display: flex;
+  gap: 30px;
+}
+
+.pg-categories li {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+/*recommeded*/
+.pg-recommended {
+  padding: 0 0 100px;
+}
+
+.pg-recommended ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  list-style: none;
+}
+
