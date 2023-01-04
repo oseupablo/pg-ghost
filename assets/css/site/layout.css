@@ -122,10 +122,11 @@
 
 /*categorias*/
 .pg-categories {
-  display: flex;
-  gap: 32px;
-  align-items: baseline;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
+}
+
+#pg-categories-inner {
+  align-items: flex-start;
 }
 
 .pg-categories ul {
@@ -145,20 +146,14 @@
 
 /*platforms*/
 .pg-platforms {
-  margin-bottom: 5rem;
-}
-
-.pg-platforms-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
+  margin-bottom: 10rem;
 }
 
 /*recommeded*/
 .pg-recommended ul {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
   align-items: flex-start;
   list-style: none;
@@ -166,5 +161,4 @@
 
 .pg-recommended li {
   flex: 1 200px;
-  padding: 0 10px;
 }
