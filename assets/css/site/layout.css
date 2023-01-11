@@ -121,14 +121,6 @@
 }
 
 /*categorias*/
-.pg-categories {
-  margin-bottom: 10rem;
-}
-
-#pg-categories-inner {
-  align-items: flex-start;
-}
-
 .pg-categories ul {
   display: flex;
   gap: 30px;
@@ -145,9 +137,7 @@
 }
 
 /*platforms*/
-.pg-platforms {
-  margin-bottom: 10rem;
-}
+
 
 /*recommeded*/
 .pg-recommended ul {
@@ -161,4 +151,20 @@
 
 .pg-recommended li {
   flex: 1 200px;
+}
+
+/*articles and others*/
+.gh-wrapper {
+  -moz-column-gap: 2.4rem;
+  column-gap: 2.4rem;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.gh-wrapper.gh-wrapper-home {
+  grid-template-columns: 4fr 2fr 2fr;
+}
+
+.gh-wrapper>.gh-section {
+  max-width: 720px;
 }

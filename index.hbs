@@ -43,11 +43,11 @@
       </div>
     </section>
 
-    <section class="pg-categories">
+    <section class="pg-categories u-section-margin">
       <h2 class="u-section-title">Categorias</h2>
-      <div id="pg-categories-inner" class="u-inner">
+      <div class="u-inner">
         <ul>
-          {{#get "tags" limit="4" as |categories|}}
+          {{#get "tags" as |categories|}}
             {{#foreach categories}}
               <li>
                 <a class="pg-topic-item" href="{{url}}">
@@ -60,7 +60,7 @@
       </div>
     </section>
 
-    <section class="pg-platforms">
+    <section class="pg-platforms u-section-margin">
       <h2 class="u-section-title">Onde ouvir</h2>
       <div class="u-inner">
         <div class="subscribe{{#if is_popup}} popup{{/if}}">
@@ -90,7 +90,7 @@
       </div>
     </section>
 
-    <section class="pg-recommended">
+    <section class="pg-recommended u-section-margin">
       <h2 class="u-section-title">Recomendados</h2>
       <div class="u-inner">
         <ul>
@@ -107,5 +107,53 @@
         </ul>
       </div>
     </section>
+
+    <div class="gh-wrapper gh-wrapper-home">
+      <section class="pg-articles">
+        <h2 class="u-section-title">Artigos</h2>
+        <div class="u-inner">
+          <ul>
+            {{#get "posts" filter="featured:true" limit="2" as |featured|}}
+            {{#foreach featured}}
+            <li>
+              <a href="{{url}}" alt="{{meta_description}}">
+                <figure><img src="{{feature_image}}" alt="{{feature_image_alt}}"></figure>
+                {{!-- <h3>{{title}}</h3> --}}
+              </a>
+            </li>
+            {{/foreach}}
+            {{/get}}
+          </ul>
+        </div>
+      </section>
+
+      <section class="pg-others">
+        <h2 class="u-section-title">Outros conteúdos</h2>
+        <div class="u-inner">
+          <ul>
+            {{#get "posts" filter="featured:true" limit="2" as |featured|}}
+            {{#foreach featured}}
+            <li>
+              <a href="{{url}}" alt="{{meta_description}}">
+                <figure><img src="{{feature_image}}" alt="{{feature_image_alt}}"></figure>
+                {{!-- <h3>{{title}}</h3> --}}
+              </a>
+            </li>
+            {{/foreach}}
+            {{/get}}
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="pg-sidebar-banner">
+          <ul>
+            <li>
+              <a href="https://bit.ly/livro-banner-diegoeis" data-event="click_banner_sidebar"><img  alt="Livro Gestão Moderna produtos digitais" src="https://i.imgur.com/Hr5WSvJ.png"></a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
   </main>
 </div>

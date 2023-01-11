@@ -16,8 +16,7 @@
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
-<div class="site">
-
+  <div class="site">
     <header id="gh-head" class="gh-head gh-outer">
         <div class="gh-head-inner gh-inner">
             <div class="gh-head-brand">
@@ -64,48 +63,45 @@
         </div>
     </header>
 
-{{!--     {{#is "home"}}
-    {{#if @site.cover_image}}
-        <div class="site-cover u-overlay">
-            <img class="cover-image u-object-fit" src="{{img_url @site.cover_image}}" alt="{{@site.title}}">
-            <div class="cover-content">
-                {{#if @site.logo}}
-                    <img class="cover-logo" src="{{@site.logo}}" alt="{{@site.title}}">
-                {{/if}}
-                {{#if @site.description}}
-                    <div class="cover-description">{{@site.description}}</div>
-                {{/if}}
-            </div>
-        </div>
-    {{/if}}
-    {{/is}} --}}
-
     <div class="site-content">
         {{{body}}}
     </div>
 
-  <footer class="gh-foot gh-outer">
-    <div class="gh-foot-inner gh-inner">
-      <nav class="gh-foot-menu">
-          {{navigation type="secondary"}}
-      </nav>
-      <div class="gh-copyright">
-          {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+    <footer class="gh-foot gh-outer">
+      <div class="gh-foot-inner gh-inner">
+        <a href="/" class="po-footer-logo">
+          <img src="{{asset "images/logo-bg-black.png"}}" alt="">
+        </a>
+        <div class="po-footer-navs">
+          <div class="po-limit-container">
+            
+            <nav class="po-footer-menu">
+              <h3>Categorias</h3>
+                        {{navigation}}
+            </nav>
+            <nav class="po-secondary">
+            {{navigation type="secondary"}}
+            </nav>
+          </div>
+        </div>
+        <p class="pg-footer-manifest">Acreditamos que comunidade funciona, que a voz por trás dos produtos é valiosa sem gurus e temos a democratização do conteúdo como missão.</p>
+        <div class="gh-copyright">
+            {{@site.title}} © {{date format="YYYY"}}.</a>
+        </div>
       </div>
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
-<script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-</script>
-<script src="{{asset "built/main.min.js"}}"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+  </script>
 
-{{{block "scripts"}}}
+  <script src="{{asset "built/main.min.js"}}"></script>
 
-{{ghost_foot}}
+  {{{block "scripts"}}}
 
+  {{ghost_foot}}
 </body>
 </html>
