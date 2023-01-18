@@ -67,27 +67,29 @@
         {{{body}}}
     </div>
 
-    <footer class="gh-foot gh-outer">
-      <div class="gh-foot-inner gh-inner">
-        <a href="/" class="po-footer-logo">
-          <img src="{{asset "images/logo-bg-black.png"}}" alt="">
-        </a>
-        <div class="po-footer-navs">
-          <div class="po-limit-container">
+    <footer class="pg-foot gh-outer">
+      <div class="pg-foot-inner gh-inner">
+        <div class="pg-footer-logo">
+          <a href="/" class="pg-footer-logo">
+          <img src="{{asset "images/logo-yellow.png"}}" alt="">
+          </a>
+          <p class="pg-footer-manifest">Acreditamos que comunidade funciona, que a voz por trás dos produtos é valiosa sem gurus e temos a democratização do conteúdo como missão.</p>
+        </div>
+        <div class="pg-footer-navs">
+          <div class="pg-limit-container">
             
-            <nav class="po-footer-menu">
+            <nav class="pg-footer-menu">
               <h3>Categorias</h3>
                         {{navigation}}
             </nav>
-            <nav class="po-secondary">
+            <nav class="pg-secondary">
             {{navigation type="secondary"}}
             </nav>
           </div>
         </div>
-        <p class="pg-footer-manifest">Acreditamos que comunidade funciona, que a voz por trás dos produtos é valiosa sem gurus e temos a democratização do conteúdo como missão.</p>
-        <div class="gh-copyright">
-            {{@site.title}} © {{date format="YYYY"}}.</a>
-        </div>
+      </div>
+      <div class="gh-copyright">
+        {{@site.title}} © {{date format="YYYY"}}.</a>
       </div>
     </footer>
   </div>

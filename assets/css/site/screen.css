@@ -1260,50 +1260,6 @@ blockquote.kg-blockquote-alt {
   opacity: .8
 }
 
-.gh-foot {
-  color: var(--color-secondary-text);
-  padding-bottom: 8rem;
-  padding-top: 8rem
-}
-
-.gh-foot-inner {
-  display: grid;
-  font-size: 1.3rem;
-  grid-template-columns: 1fr auto 1fr
-}
-
-.gh-foot-menu .nav {
-  align-items: center;
-  display: inline-flex;
-  list-style: none;
-  margin: 0;
-  padding: 0
-}
-
-.gh-foot-menu .nav li {
-  align-items: center;
-  display: flex
-}
-
-.gh-foot-menu .nav li+li:before {
-  content: "•";
-  font-size: .9rem;
-  line-height: 0;
-  padding: 0 1.2rem
-}
-
-.gh-powered-by {
-  text-align: right
-}
-
-.gh-foot a {
-  color: var(--color-secondary-text)
-}
-
-.gh-foot a:hover {
-  color: var(--color-darker-gray);
-  opacity: 1
-}
 
 @media (max-width:767px) {
   .gh-foot {
