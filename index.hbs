@@ -16,7 +16,7 @@
         </ul>
       </div>
 
-      {{#get "posts" filter="tag:-programas" limit="1" include="authors"}}
+      {{#get "posts" filter="tags:episodios" limit="1" include="authors"}}
         {{#foreach posts}}
           <div class="pg-featured-home">
             <a href="{{url}}" data-event="pg-featured-post-image">
@@ -31,7 +31,7 @@
 
       <div class="pg-latest-posts">
         <ul>
-          {{#get "posts" filter="tag:-programas" limit="3" include="authors"}}
+          {{#get "posts" filter="tag:episodios" limit="3" include="authors"}}
             {{#foreach posts from=2 limit=3}}
             <li>
               <a href="{{url}}" data-event="pg-recent-posts" class="pg-latest-post-img"><img src="{{feature_image}}" alt="{{feature_image_alt}}"></a>
@@ -99,7 +99,6 @@
           <li>
             <a href="{{url}}" alt="{{meta_description}}">
               <figure><img src="{{feature_image}}" alt="{{feature_image_alt}}"></figure>
-              {{!-- <h3>{{title}}</h3> --}}
             </a>
           </li>
           {{/foreach}}
@@ -108,48 +107,36 @@
       </div>
     </section>
 
-    <div class="gh-wrapper gh-wrapper-home">
+    <div id="pg-last-section" class="gh-wrapper gh-wrapper-home">
       <section class="pg-articles">
         <h2 class="u-section-title">Artigos</h2>
         <div class="u-inner">
-          <ul>
-            {{#get "posts" filter="featured:true" limit="2" as |featured|}}
-            {{#foreach featured}}
-            <li>
-              <a href="{{url}}" alt="{{meta_description}}">
-                <h3>{{title}}</h3>
-              </a>
-            </li>
-            {{/foreach}}
-            {{/get}}
-          </ul>
+          {{#get "posts" filter="tag:artigos" limit="5" as |article|}}
+          {{#foreach article}}
+            <a href="{{url}}" alt="{{meta_description}}">
+              <h3>{{title}}</h3>
+            </a>
+          {{/foreach}}
+          {{/get}}
         </div>
       </section>
 
       <section class="pg-others">
         <h2 class="u-section-title">Outros conteúdos</h2>
         <div class="u-inner">
-          <ul>
-            {{#get "posts" filter="featured:true" limit="2" as |featured|}}
-            {{#foreach featured}}
-            <li>
-              <a href="{{url}}" alt="{{meta_description}}">
-                <h3>{{title}}</h3>
-              </a>
-            </li>
-            {{/foreach}}
-            {{/get}}
-          </ul>
+          {{#get "posts" filter="tags:[workshops,videos,ebooks]" limit="5" as |others|}}
+          {{#foreach others}}
+            <a href="{{url}}" alt="{{meta_description}}">
+              <h3>{{title}}</h3>
+            </a>
+          {{/foreach}}
+          {{/get}}
         </div>
       </section>
 
       <aside>
         <div class="pg-sidebar-banner">
-          <ul>
-            <li>
-              <a href="https://bit.ly/livro-banner-diegoeis" data-event="click_banner_sidebar"><img  alt="Livro Gestão Moderna produtos digitais" src="https://i.imgur.com/Hr5WSvJ.png"></a>
-            </li>
-          </ul>
+          <a href="https://bit.ly/livro-banner-diegoeis" data-event="click_banner_sidebar"><img  alt="Livro Gestão Moderna produtos digitais" src="https://i.imgur.com/Hr5WSvJ.png"></a>
         </div>
       </aside>
     </div>

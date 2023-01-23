@@ -153,6 +153,15 @@
   max-width: 720px;
 }
 
+#pg-last-section {
+  grid-template-columns: 2fr 2fr 1.8fr;
+  column-gap: 3.4rem;
+}
+
+.pg-sidebar-banner {
+  margin-top: 10px;
+}
+
 /*footer*/
 .pg-foot {
   background-color: #293036;
