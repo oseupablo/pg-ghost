@@ -110,6 +110,7 @@
     <div id="pg-last-section" class="gh-wrapper gh-wrapper-home">
       <section class="pg-articles">
         <h2 class="u-section-title">Artigos</h2>
+        <h3><a href="/blog">Veja todos</a></h3>
         <div class="u-inner">
           {{#get "posts" filter="tag:artigos" limit="5" as |article|}}
           {{#foreach article}}
@@ -123,6 +124,7 @@
 
       <section class="pg-others">
         <h2 class="u-section-title">Outros conteúdos</h2>
+        <h3><a href="/others">Veja todos</a></h3>
         <div class="u-inner">
           {{#get "posts" filter="tags:[workshops,videos,ebooks]" limit="5" as |others|}}
           {{#foreach others}}
@@ -136,7 +138,7 @@
 
       <aside>
         <div class="pg-sidebar-banner">
-          <a href="https://bit.ly/livro-banner-diegoeis" data-event="click_banner_sidebar"><img  alt="Livro Gestão Moderna produtos digitais" src="https://i.imgur.com/Hr5WSvJ.png"></a>
+          <a href="https://itau.com.br"><img  alt="Itaú programa" src="{{asset "images/banner-itau.jpeg"}}"></a>
         </div>
       </aside>
     </div>

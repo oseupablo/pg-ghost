@@ -5,3 +5,7 @@
   font-size: 100%;
   text-rendering: optimizeLegibility;
 }
+
+a {
+  transition: all linear .13s;
+}
